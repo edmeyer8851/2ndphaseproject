@@ -1,0 +1,62 @@
+{
+  "games": [
+    {
+      "id": 1,
+      "name": "Aloe",
+      "image": "./images/aloe.jpg",
+      "price": 15.99
+    },
+    {
+      "price": "99999999999",
+      "id": 2
+    },
+    {
+      "price": "99999999999",
+      "id": 3
+    },
+    {
+      "price": "99999999999",
+      "id": 4
+    },
+    {
+      "name": "yyyyyyyyyyyyy",
+      "image": "zzzzzzzzzzzz",
+      "price": "022222222222",
+      "id": 5
+    },
+    {
+      "name": "rrrrrrrrrrrrrr",
+      "image": "wwwwwwwwwwwwww",
+      "price": "03333333",
+      "id": 6
+    },
+    {
+      "gamename": "snakegame",
+      "gamereview": "sd",
+      "gamelike": false,
+      "gametype": "",
+      "id": 7
+    },
+    {
+      "gamename": "snakegame",
+      "gamereview": "sd",
+      "gamelike": false,
+      "gametype": "",
+      "id": 8
+    },
+    {
+      "gamename": "snakegame",
+      "gamereview": "sd",
+      "gamelike": false,
+      "gametype": "",
+      "id": 9
+    },
+    {
+      "gamename": "snakegame",
+      "gamereview": "sd",
+      "gamelike": true,
+      "gametype": "",
+      "id": 10
+    }
+  ]
+}
