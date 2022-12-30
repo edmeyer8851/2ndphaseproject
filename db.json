@@ -1,62 +1,88 @@
 {
   "games": [
     {
-      "id": 1,
-      "name": "Aloe",
-      "image": "./images/aloe.jpg",
-      "price": 15.99
-    },
-    {
-      "price": "99999999999",
+      "gamename": "snakegame",
+      "gamereview": "Snakegame was fun",
+      "gamelike": true,
+      "gametype": "",
       "id": 2
     },
     {
-      "price": "99999999999",
+      "gamename": "snakegame",
+      "gamereview": "Snakegame was awesome",
+      "gamelike": false,
+      "gametype": "",
       "id": 3
     },
     {
-      "price": "99999999999",
+      "gamename": "snakegame",
+      "gamereview": "Snakegame was fantastic",
+      "gamelike": false,
+      "gametype": "",
       "id": 4
     },
     {
-      "name": "yyyyyyyyyyyyy",
-      "image": "zzzzzzzzzzzz",
-      "price": "022222222222",
+      "gamename": "snakegame",
+      "gamereview": "Snakegame was hilarious",
+      "gamelike": false,
+      "gametype": "",
       "id": 5
     },
     {
-      "name": "rrrrrrrrrrrrrr",
-      "image": "wwwwwwwwwwwwww",
-      "price": "03333333",
+      "gamename": "snakegame",
+      "gamereview": "Snakegame was super boring",
+      "gamelike": true,
+      "gametype": "",
       "id": 6
     },
     {
       "gamename": "snakegame",
-      "gamereview": "sd",
+      "gamereview": "Snakegame was terrible",
       "gamelike": false,
       "gametype": "",
       "id": 7
     },
     {
-      "gamename": "snakegame",
-      "gamereview": "sd",
+      "gamename": "breakout",
+      "gamereview": "Breakout was terrible",
       "gamelike": false,
       "gametype": "",
       "id": 8
     },
     {
-      "gamename": "snakegame",
-      "gamereview": "sd",
+      "gamename": "breakout",
+      "gamereview": "Breakout was fun ",
       "gamelike": false,
       "gametype": "",
       "id": 9
     },
     {
-      "gamename": "snakegame",
-      "gamereview": "sd",
-      "gamelike": true,
+      "gamename": "breakout",
+      "gamereview": "Breakout was funny",
+      "gamelike": false,
       "gametype": "",
       "id": 10
+    },
+    {
+      "gamename": "breakout",
+      "gamereview": "Breakout was healthy",
+      "gamelike": false,
+      "gametype": "",
+      "id": 11
+    },
+    {
+      "gamename": "breakout",
+      "gamereview": "Breakout was fun",
+      "gamelike": false,
+      "gametype": "",
+      "id": 12
+    },
+    {
+      "gamename": "breakout",
+      "gamereview": "Breakout was boring",
+      "gamelike": false,
+      "gametype": "",
+      "id": 13
     }
   ]
 }
