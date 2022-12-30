@@ -1,129 +1,73 @@
-import React, {useState, useEffect} from "react";
-import { Route, Switch, BrowserRouter } from "react-router-dom";// import Header from "./Header";
-import NavBar from "./NavBar"
-import Snakegame from "./Snakegame"
-import Breakout from "./Breakout"
-// import PlantPage from "./PlantPage";
+import React from "react";
+import styled from 'styled-components';
+import './Styles.css';
+import { Button, Container, Divider, Grid, Header, Image, Menu, Segment } from "semantic-ui-react";
+import { Icon } from 'semantic-ui-react'
+import 'semantic-ui-css/semantic.min.css'
 
-function App() {
+function Home({games}) {
 
-  const [games, setGames] = useState ([])
+    const allGames = games.map (game => {
+      return game
+    })
+  
+    console.log("allGames", allGames)
+  
+    const selectedArrays = games.sort(() => Math.random() - 0.5).slice(0,5);
+  
+    return (
+  
+      <Grid textAlign = 'center'  verticalAlign = 'middle'>
+        <Header as='h2' color = 'teal'  textAlign = 'center'><br /> Home </Header>
+        <Grid columns = 'equal'>
+          <Grid.Row columns = 'equal'>
+            <Grid.Column>
+              <div className = "center">
+              <div class = "ui card">
+                <div class = "image">
+                    <img src = "https://www.educative.io/v2api/editorpage/6684016653631488/image/5929780181467136" />                
+                </div>
+                <div class = "content"> 
+                    <a class = "header"> Snake Game </a>
+                </div>
+                <div class = "description" textAlign = "center"> Top Snakegame Reviews</div>
+                <div class = "ui list">
+                    {selectedArrays.map((game) => {
+                        if (game.gamename === "snakegame") {
+                            return <div class = "item" key = {game.id}>{game.gamereview} </div>
+                        }
+                    })}
+                </div>
 
-  useEffect (() => {
-    fetch ("http://localhost:6001/games")
-    .then (resp => resp.json())
-    .then (setGames)
-  }, [])
+              </div>
+              </div>
+            </Grid.Column>
+            <Grid.Column>
+              <div className = "center">
+              <div class = "ui card">
+                <div class = "image">
+                    <img src = "https://www.educative.io/v2api/editorpage/6684016653631488/image/5929780181467136" />                
+                </div>
+                <div class = "content"> 
+                    <a class = "header"> Breakout Game </a>
+                </div>
+                <div class = "description" textAlign = "center"> Top Breakout Reviews</div>
+                <div class = "ui list">
+                    {selectedArrays.map((game) => {
+                        if (game.gamename === "Breakout") {
+                            return <div class = "item" key = {game.id}>{game.gamereview} </div>
+                        }
+                    })}
+                </div>
 
-  const addNewGame = (myGame) => {
-    setGames([...games, myGame])
+              </div>
+              </div>
+            </Grid.Column>
+          </Grid.Row>
+        </Grid>
+      </Grid>
+    )
   }
-
-  return (
-   <BrowserRouter>
-    <div>
-      <h3> Retro Games </h3>
-      <NavBar /> 
-    </div>
-    <div> 
-      <Switch> 
-        <Route path = "/snakegame">
-          <Snakegame games = {games} addNewGame = {addNewGame} />
-        </Route>
-        <Route path = "/breakout">
-          <Breakout />
-        </Route>
-
-      </Switch>
-    </div>
-   </BrowserRouter>
-  );
-}
-
-export default App;
-import React, {useState, useEffect} from "react";
-import { Route, Switch, BrowserRouter } from "react-router-dom";// import Header from "./Header";
-import NavBar from "./NavBar"
-import Snakegame from "./Snakegame"
-import Breakout from "./Breakout"
-// import PlantPage from "./PlantPage";
-
-function App() {
-
-  const [games, setGames] = useState ([])
-
-  useEffect (() => {
-    fetch ("http://localhost:6001/games")
-    .then (resp => resp.json())
-    .then (setGames)
-  }, [])
-
-  const addNewGame = (myGame) => {
-    setGames([...games, myGame])
-  }
-
-  return (
-   <BrowserRouter>
-    <div>
-      <h3> Retro Games </h3>
-      <NavBar /> 
-    </div>
-    <div> 
-      <Switch> 
-        <Route path = "/snakegame">
-          <Snakegame games = {games} addNewGame = {addNewGame} />
-        </Route>
-        <Route path = "/breakout">
-          <Breakout />
-        </Route>
-
-      </Switch>
-    </div>
-   </BrowserRouter>
-  );
-}
-
-export default App;
-import React, {useState, useEffect} from "react";
-import { Route, Switch, BrowserRouter } from "react-router-dom";// import Header from "./Header";
-import NavBar from "./NavBar"
-import Snakegame from "./Snakegame"
-import Breakout from "./Breakout"
-// import PlantPage from "./PlantPage";
-
-function App() {
-
-  const [games, setGames] = useState ([])
-
-  useEffect (() => {
-    fetch ("http://localhost:6001/games")
-    .then (resp => resp.json())
-    .then (setGames)
-  }, [])
-
-  const addNewGame = (myGame) => {
-    setGames([...games, myGame])
-  }
-
-  return (
-   <BrowserRouter>
-    <div>
-      <h3> Retro Games </h3>
-      <NavBar /> 
-    </div>
-    <div> 
-      <Switch> 
-        <Route path = "/snakegame">
-          <Snakegame games = {games} addNewGame = {addNewGame} />
-        </Route>
-        <Route path = "/breakout">
-          <Breakout />
-        </Route>
-
-      </Switch>
-    </div>
-   </BrowserRouter>
-  );
-}
-
-export default App;
+  
+  export default Home;
+  
